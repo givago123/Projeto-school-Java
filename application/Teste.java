@@ -24,21 +24,24 @@ public class Teste {
 		
 		int opcao;
 		do {
-			System.out.print("Digite a opção de cadastro: (aluno = 1/ funcionario = 2)");
+			System.out.print("Digite a opção de cadastro: (aluno = 1/ funcionario = 2) ");
 			opcao = Integer.parseInt(sc.next());
 			
 			switch (opcao) {
 			case 1: 
 				System.out.print("Digite o nome do Aluno: ");
 				String nome = sc.nextLine();
+				sc.nextLine();
 				System.out.print("Digite a Data de Nascimento: ");
 				Date dataDeNascimento = sft.parse(sc.next());
 				System.out.print("Digite RG: ");
 				String rg = sc.nextLine();
+				sc.nextLine();
 				System.out.print("Digite Data da Matricula: ");
 				Date dataDaMatricula = sft.parse(sc.next());
 				System.out.print("Digite RA do Aluno: ");
 				String ra = sc.nextLine();
+				sc.nextLine();
 				
 				alunos.add(new Aluno(dataDeNascimento, nome, rg, dataDaMatricula, ra));
 				
@@ -46,13 +49,16 @@ public class Teste {
 			case 2:
 				System.out.print("Digite nome do Funcionario: ");
 				String nomeFuncionario = sc.nextLine();
+				sc.nextLine();
 				System.out.print("Digite data de Nascimento: ");
 				Date dataNascimentoFuncionario =sft.parse(sc.next());
 				System.out.print("Digite RG: ");
 				String rgFuncionario = sc.nextLine();
+				sc.nextLine();
 				System.out.print("Digite data de Admissão: ");
 				Date dataDeAdmissao = sft.parse(sc.next());
 				System.out.print("Digite função: ");
+				sc.nextLine();
 				String funcao = sc.nextLine();
 				System.out.print("Digite salario: ");
 				double salario = sc.nextDouble();
